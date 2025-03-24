@@ -1,0 +1,23 @@
+"""
+Write an algorithm that can display the following
+
+  *
+ ***
+*****
+"""
+Begin
+    Variable height, row, column, spaces as Integer
+    Write "Enter the number of rows of the triangle : "
+    Read height
+    spaces ← height - 1
+    For row ← 1 to height Do
+        For column ← 1 to spaces Do
+            Write " "
+        EndFor
+        spaces ← spaces - 1
+        For column ← 1 to ((2*row)-1) Do
+            Write "*"
+        End For
+        Write "\n"
+    End For
+End

@@ -1,0 +1,34 @@
+"""
+Write an algorithm that can display the following
+
+*
+**
+***
+**
+*
+"""
+
+/*
+I used this method because it's more efficient in space
+Time Complexity of 𝑂(𝑛²) 
+Space Complexity of 𝑂(1)
+*/
+
+Begin
+    Variable i, j, length as Integer
+    Write "Enter the length of the triangle : "
+    Read length
+    for i <- 1 to length do
+        for j <- 1 to i do
+            Write "*"
+        end For
+        Write "\n"
+    end For
+    for i <- length -1 down to 1 do
+        for j <- 1 to i do
+            Write "*"
+        end For
+        Write "\n"
+    end For
+End
+

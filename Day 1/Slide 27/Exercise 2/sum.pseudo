@@ -1,0 +1,15 @@
+"""
+write an algorithm that asks an 
+Integer and calculate the sum from 
+0 to this Integer
+"""
+Begin
+    Variable inputNumber,sum, counter as Integer
+    Write "Enter a number: "
+    Read inputNumber
+    sum <- 0
+    For counter <-0 to inputNumber do
+        sum <- sum + counter
+    EndFor
+    Write "The sum is: ", sum
+End

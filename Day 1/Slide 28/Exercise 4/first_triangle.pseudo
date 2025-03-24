@@ -1,0 +1,42 @@
+"""
+Write an algorithm that can display the following
+
+*
+**
+***
+****
+*****
+"""
+//Method 1:
+Begin
+    Variable height,i,j as Integers
+    Write "Enter the height of the triangle : "
+    Read height
+    for i<- 1 to height do
+        for j<- 1 to i do
+            Write "*"
+        EndFor
+        Write "\n"
+    EndFor
+End
+/*
+Time complexity 𝑂(𝑛²)
+Space complexity 𝑂(1) We use fixed number of variables "3"
+*/
+
+//Method 2:
+Begin
+    Variable height,i as Integers
+    Variables stars as String
+    Write "Enter the height of the triangle : "
+    Read height
+    stars <- ""
+    for i <- 1 to height do
+        stars <- stars + "*"
+        Write stars + "\n"
+    end
+End
+/*
+Time complexity 𝑂(𝑛²) "String concatenation is not constant-time"
+Space complexity 𝑂(𝑛)
+*/
