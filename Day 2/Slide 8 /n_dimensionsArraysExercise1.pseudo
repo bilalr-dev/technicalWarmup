@@ -1,0 +1,51 @@
+//Exercise:
+/*
+What will this algorithm produce?
+
+        Variable T as Integer[4][2]
+        Variables k,m as Integer
+        Begin
+            For k <- 0 to 3
+                For m <- 0 to 1
+                    T[k][m] <- k + m
+                EndFor
+            EndFor
+            For k <- 0 to 3
+                For m <- 0 to 1
+                    Display T[k][m]
+                EndFor
+            EndFor
+        End
+    
+*/ 
+//Solution:        
+1-We define a 2D array T with dimensions 4x2, it will store 4 rows and 2 columns, 
+which gives a total of 8 integer values.
+2-We define two integers k and m
+3-We begin the algorithm
+4-We define a for loop that iterates over k from 0 to 3
+5-We define a nested for loop inside the first loop that iterates over m from 0 to 1
+k = 0 :
+    m = 0 :
+        T[0][0] = 0+0 = 0
+    m = 1 :
+        T[0][1] = 0+1 = 1
+k = 1 :
+    m = 0 :
+        T[1][0] = 1+0 = 1
+    m = 1 :
+        T[1][1] = 1+1 = 2
+k = 2 :
+    m = 0 :
+        T[2][0] = 2+0 = 2
+    m = 1 :
+        T[2][1] = 2+1 = 3
+k = 3 :
+    m = 0 :
+        T[3][0] = 3+0 = 3
+    m = 1 :
+        T[3][1] = 3+1 = 4
+6-We declare another for loop to display the values stored in the array T
+7-The final output displayed will be:
+    01213234
+

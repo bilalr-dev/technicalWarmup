@@ -1,0 +1,71 @@
+/*
+Implement the factorial in a reusable function
+Bonus : implement factorial in 3 different ways
+*/
+
+//Method 1: for loop
+BEGIN
+    Variable inputNumber, counter, factorial as Integer
+    DO
+        Write "Enter a positive number : "
+        Read inputNumber
+    WHILE inputNumber < 0
+    factorial <- 1
+    FOR counter <-1 to inputNumber
+        factorial <- factorial * counter
+    END FOR
+    Write inputNumber, "! = ", factorial
+END
+/*
+This method runs n times, so the time complexity is 𝑂(𝑛)
+We have 3 variables, so the time complexity is constant 𝑂(1)
+*/ 
+
+//Method 2: while loop
+BEGIN
+    Variable inputNumber, counter, factorial as Integer
+    DO
+        Write "Enter a positive number : "
+        Read inputNumber
+    WHILE inputNumber < 0
+    factorial <- 1
+    counter <- inputNumber
+    WHILE counter > 1
+        factorial <- factorial * counter
+        counter <- counter - 1
+    Write inputNumber, "! = ", factorial
+END
+/*
+This method runs n times, so the time complexity is 𝑂(𝑛)
+We have 3 variables, so the time complexity is constant 𝑂(1)
+*/ 
+
+//Method 3: recursive
+BEGIN
+    FUNCTION Integer factorial(inputNumber as Integer)
+        IF inputNumber < 0 THEN
+            Write "Please enter a positive number"
+            Return -1
+        ELSE IF inputNumber = 0 OR inputNumber = 1 THEN
+            Return 1
+        ELSE
+            Return inputNumber * factorial(inputNumber - 1)
+        END IF
+    END FUNCTION
+
+    DO
+        Write "Enter a number: "
+        Read inputNumber
+        IF inputNumber < 0 THEN
+            Write "Please enter a positive number"
+        END IF
+    WHILE inputNumber < 0
+
+    Write inputNumber, "! = ", factorial(inputNumber)
+END
+
+
+/*
+The function makes n recursive calls down to 1!, so the time complexity is 𝑂(𝑛)
+Each recursive call is stored in the function call stack, so the time complexity is constant 𝑂(𝑛)
+*/ 

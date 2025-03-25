@@ -1,0 +1,41 @@
+/*
+1-n-dimensions array/multidimensional array  : 
+A data structure that can store 
+many values of the same data type,
+it is fixed size data structure,
+meaning the number of elements 
+cannot change once defined.
+
+In an N-dimensional array, the data is organized in multiple dimensions. For example:
+
+1D Array: A single list of values.
+2D Array/Matrix/Array of array: A grid with rows and columns.
+3D Array: An array of 2D arrays, like a cube.
+etc..
+Examples:
+    double prices[] = {5.5, 6.5, 7.5, 8.5};
+
+    int numbers[2][3] = 
+    {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    Row 0: 1  2  3
+    Row 1: 4  5  6
+
+
+    int cube[2][3][3] = {
+        {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
+        {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}}
+    };
+    Layer 0:
+    Row 0: 1  2  3
+    Row 1: 4  5  6
+    Row 2: 7  8  9
+
+    Layer 1:
+    Row 0: 10 11 12
+    Row 1: 13 14 15
+    Row 2: 16 17 18
+    
+*/
